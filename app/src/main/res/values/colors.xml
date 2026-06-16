@@ -14,6 +14,15 @@
     <color name="onboarding_description_color">#6C7289</color>
     <color name="onboarding_button_text">#FF9A45</color>
     <color name="onboarding_pill_background">#66FFFFFF</color>
-    <color name="onboarding_button_background">#F3F3F3</color>
+    <color name="onboarding_button_background">#DCDCDC</color>
     <color name="onboarding_last_button_text">@android:color/white</color>
+
+    <!-- Login -->
+    <color name="login_screen_background">#7A7A7A</color>
+    <color name="login_card_background">#FFFFFF</color>
+    <color name="login_title_blue">#334A5E</color>
+    <color name="login_hint">#B7B7B7</color>
+    <color name="login_input_background">#DCDCDC</color>
+    <color name="login_button_background">#FF984A</color>
+    <color name="login_text_primary">#222222</color>
 </resources>

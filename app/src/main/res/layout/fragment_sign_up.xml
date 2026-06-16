@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fillViewport="true"
-    tools:context=".ui.auth.LoginFragment">
+    tools:context=".ui.auth.SignUpFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,32 +52,92 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/spacing_sm"
-                    android:text="@string/enter_your_details" />
+                    android:text="@string/create_account" />
 
-                <!-- Railora Username -->
+                <!-- Full Name -->
                 <TextView
-                    android:id="@+id/tvUsernameLabel"
                     style="@style/RailoraLoginLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_lg"
-                    android:text="@string/railora_username" />
+                    android:text="@string/full_name" />
 
                 <EditText
-                    android:id="@+id/etUsername"
+                    android:id="@+id/etFullName"
                     style="@style/RailoraLoginInput"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/login_input_height"
                     android:layout_marginTop="@dimen/spacing_sm"
                     android:background="@drawable/bg_login_input"
-                    android:hint="@string/enter_username"
-                    android:inputType="text"
+                    android:hint="@string/enter_full_name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/spacing_md" />
+
+                <!-- Aadhaar Number -->
+                <TextView
+                    style="@style/RailoraLoginLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="@string/aadhaar_number" />
+
+                <EditText
+                    android:id="@+id/etAadhaar"
+                    style="@style/RailoraLoginInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:background="@drawable/bg_login_input"
+                    android:hint="@string/enter_aadhaar_number"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/spacing_md" />
+
+                <!-- Date of Birth -->
+                <TextView
+                    style="@style/RailoraLoginLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="@string/date_of_birth" />
+
+                <EditText
+                    android:id="@+id/etDob"
+                    style="@style/RailoraLoginInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:background="@drawable/bg_login_input"
+                    android:hint="@string/enter_date_of_birth"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/spacing_md" />
+
+                <!-- Email -->
+                <TextView
+                    style="@style/RailoraLoginLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="@string/email_address" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/RailoraLoginInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:background="@drawable/bg_login_input"
+                    android:hint="@string/enter_email_address"
+                    android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:paddingHorizontal="@dimen/spacing_md" />
 
                 <!-- Password -->
                 <TextView
-                    android:id="@+id/tvPasswordLabel"
                     style="@style/RailoraLoginLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,17 +156,28 @@
                     android:maxLines="1"
                     android:paddingHorizontal="@dimen/spacing_md" />
 
+                <!-- Confirm Password -->
                 <TextView
-                    android:id="@+id/tvForgotPassword"
-                    style="@style/RailoraLoginFooter"
+                    style="@style/RailoraLoginLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_md"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/forgot_password" />
+                    android:text="@string/confirm_password" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    style="@style/RailoraLoginInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:background="@drawable/bg_login_input"
+                    android:hint="@string/enter_confirm_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/spacing_md" />
 
                 <TextView
-                    android:id="@+id/btnLogin"
+                    android:id="@+id/btnCreateAccount"
                     style="@style/RailoraLoginButton"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/login_button_height"
@@ -115,7 +186,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:text="@string/user_login"
+                    android:text="@string/create_account"
                     android:textColor="@color/white" />
 
             </LinearLayout>
@@ -127,22 +198,23 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/spacing_lg"
                 android:layout_alignParentBottom="true"
+                android:layout_below="@+id/layoutContent"
                 android:orientation="horizontal">
 
                 <TextView
                     style="@style/RailoraLoginFooter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dont_have_account" />
+                    android:text="@string/already_have_account" />
 
                 <TextView
-                    android:id="@+id/tvSignUp"
+                    android:id="@+id/tvLogin"
                     style="@style/RailoraLoginFooter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/footer_spacing"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="@string/sign_up"
+                    android:text="@string/login"
                     android:textColor="@color/login_title_blue" />
 
             </LinearLayout>

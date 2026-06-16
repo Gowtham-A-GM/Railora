@@ -50,4 +50,41 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+
+    <!-- Login Title -->
+    <style name="RailoraLoginTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/login_title_size</item>
+        <item name="android:textColor">@color/login_title_blue</item>
+    </style>
+
+    <!-- Login Labels -->
+    <style name="RailoraLoginLabel">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/login_label_size</item>
+        <item name="android:textColor">@color/login_text_primary</item>
+    </style>
+
+    <!-- Login EditText -->
+    <style name="RailoraLoginInput">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/login_text_primary</item>
+        <item name="android:textColorHint">@color/login_hint</item>
+    </style>
+
+    <!-- Login Button -->
+    <style name="RailoraLoginButton">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/login_button_text_size</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Footer Text -->
+    <style name="RailoraLoginFooter">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/login_body_size</item>
+        <item name="android:textColor">@color/login_text_primary</item>
+    </style>
+
 </resources>

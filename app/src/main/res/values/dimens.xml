@@ -14,7 +14,6 @@
 
     <!-- Onboarding Top Actions -->
     <dimen name="onboarding_top_margin">56dp</dimen>
-
     <dimen name="onboarding_pill_padding_horizontal">18dp</dimen>
     <dimen name="onboarding_pill_padding_vertical">10dp</dimen>
 
@@ -24,11 +23,27 @@
     <!-- Bottom Card -->
     <dimen name="onboarding_card_height">280dp</dimen>
     <dimen name="onboarding_card_padding">28dp</dimen>
-
     <dimen name="onboarding_description_margin_top">12dp</dimen>
 
     <!-- Button -->
     <dimen name="onboarding_button_height">56dp</dimen>
-    <dimen name="onboarding_button_corner_radius">20dp</dimen>
+    <dimen name="onboarding_button_corner_radius">14dp</dimen>
     <dimen name="onboarding_button_elevation">2dp</dimen>
+
+    <!-- Login -->
+    <dimen name="login_header_height">250dp</dimen>
+    <dimen name="login_card_corner_radius">28dp</dimen>
+    <dimen name="login_logo_size">40dp</dimen>
+    <dimen name="login_input_height">56dp</dimen>
+    <dimen name="login_button_height">52dp</dimen>
+    <dimen name="login_horizontal_padding">24dp</dimen>
+    <dimen name="login_vertical_spacing">16dp</dimen>
+    <dimen name="login_title_size">24sp</dimen>
+    <dimen name="login_label_size">14sp</dimen>
+    <dimen name="login_card_overlap">-20sp</dimen>
+    <dimen name="login_body_size">12sp</dimen>
+    <dimen name="login_button_text_size">16sp</dimen>
+    <dimen name="login_input_corner_radius">12dp</dimen>
+    <dimen name="login_button_corner_radius">12dp</dimen>
+    <dimen name="footer_spacing">4dp</dimen>
 </resources>
