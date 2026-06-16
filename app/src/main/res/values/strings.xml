@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Railora</string>
+
+    <!-- Splash screen -->
+    <string name="splash_brand_name">RAILORA</string>
+    <string name="splash_tagline">Your Journey Begins Here</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_image">Onboarding Illustration</string>
+    <string name="back">Back</string>
+    <string name="skip">Skip</string>
+    <string name="continue_text">Continue</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Onboarding Titles -->
+    <string name="onboarding_title_1">Hey there, traveler!</string>
+    <string name="onboarding_title_2">Book Your Tickets</string>
+    <string name="onboarding_title_3">Manage Your Plans</string>
+    <string name="onboarding_title_4">We Remember You</string>
+    <string name="onboarding_title_5">Stay in the Know</string>
+    <string name="onboarding_title_6">Sign Up in a Snap!</string>
+
+    <!-- Onboarding Descriptions -->
+    <string name="onboarding_desc_1">Welcome to Railora. Book your train journeys with ease.</string>
+    <string name="onboarding_desc_2">Search trains and reserve your seats in just a few taps.</string>
+    <string name="onboarding_desc_3">View upcoming trips and organize your travel effortlessly.</string>
+    <string name="onboarding_desc_4">Save your preferences for a faster booking experience.</string>
+    <string name="onboarding_desc_5">Get updates, notifications, and journey reminders.</string>
+    <string name="onboarding_desc_6">Let\'s get started and make your journeys simpler.</string>
+
+    <string name="onboarding_placeholder_title">Onboarding</string>
+    <string name="onboarding_placeholder_message">Coming soon</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reusable orange gradient background for the splash screen -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:angle="270"
+        android:endColor="@color/railora_orange_end"
+        android:startColor="@color/railora_orange_start"
+        android:type="linear" />
+
+</shape>

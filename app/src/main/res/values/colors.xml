@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Railora brand colors -->
+    <color name="railora_orange_start">#F4511E</color>
+    <color name="railora_orange_end">#FFB300</color>
+    <color name="railora_white">#FFFFFFFF</color>
+    <color name="railora_text_primary">#FFFFFFFF</color>
+
+    <!-- Onboarding -->
+    <color name="onboarding_title_color">#4A5A88</color>
+    <color name="onboarding_description_color">#6C7289</color>
+    <color name="onboarding_button_text">#FF9A45</color>
+    <color name="onboarding_pill_background">#66FFFFFF</color>
+    <color name="onboarding_button_background">#F3F3F3</color>
+    <color name="onboarding_last_button_text">@android:color/white</color>
+</resources>

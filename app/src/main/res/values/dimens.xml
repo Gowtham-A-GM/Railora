@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shared spacing -->
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+
+    <!-- Splash screen -->
+    <dimen name="logo_size">80dp</dimen>
+    <dimen name="splash_title_size">32sp</dimen>
+    <dimen name="splash_tagline_size">16sp</dimen>
+    <dimen name="splash_logo_to_title_spacing">16dp</dimen>
+    <dimen name="splash_title_to_tagline_spacing">8dp</dimen>
+
+    <!-- Onboarding Top Actions -->
+    <dimen name="onboarding_top_margin">56dp</dimen>
+
+    <dimen name="onboarding_pill_padding_horizontal">18dp</dimen>
+    <dimen name="onboarding_pill_padding_vertical">10dp</dimen>
+
+    <!-- Indicators -->
+    <dimen name="onboarding_indicator_margin_bottom">295dp</dimen>
+
+    <!-- Bottom Card -->
+    <dimen name="onboarding_card_height">280dp</dimen>
+    <dimen name="onboarding_card_padding">28dp</dimen>
+
+    <dimen name="onboarding_description_margin_top">12dp</dimen>
+
+    <!-- Button -->
+    <dimen name="onboarding_button_height">56dp</dimen>
+    <dimen name="onboarding_button_corner_radius">20dp</dimen>
+    <dimen name="onboarding_button_elevation">2dp</dimen>
+</resources>
