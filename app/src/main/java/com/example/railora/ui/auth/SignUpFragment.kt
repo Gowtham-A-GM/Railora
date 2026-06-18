@@ -9,6 +9,8 @@ import com.example.railora.R
 import com.example.railora.databinding.FragmentSignUpBinding
 import androidx.navigation.fragment.findNavController
 import android.app.DatePickerDialog
+import android.content.Intent
+import com.example.railora.MainActivity
 import java.util.Calendar
 
 class SignUpFragment : Fragment() {
@@ -38,9 +40,9 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnCreateAccount.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_signUpFragment_to_homeFragment
-            )
+            val intent = Intent(requireContext(), MainActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
         }
 
         binding.tvLogin.setOnClickListener {

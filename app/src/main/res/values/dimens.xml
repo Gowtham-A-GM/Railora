@@ -46,4 +46,46 @@
     <dimen name="login_input_corner_radius">12dp</dimen>
     <dimen name="login_button_corner_radius">12dp</dimen>
     <dimen name="footer_spacing">4dp</dimen>
+
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="bottom_nav_icon_size">24dp</dimen>
+    <dimen name="bottom_nav_text_size">12sp</dimen>
+
+    <!-- Home -->
+    <dimen name="home_header_spacing">8dp</dimen>
+    <dimen name="home_header_logo_size">32dp</dimen>
+    <dimen name="home_header_top_spacing">8dp</dimen>
+    <dimen name="home_greeting_spacing">4dp</dimen>
+
+    <dimen name="home_screen_padding">16dp</dimen>
+    <dimen name="home_card_height">52dp</dimen>
+    <dimen name="home_button_height">60dp</dimen>
+    <dimen name="home_card_radius">12dp</dimen>
+    <dimen name="home_section_spacing">12dp</dimen>
+
+    <!-- Home Banner -->
+    <dimen name="home_banner_height">120dp</dimen>
+    <dimen name="home_banner_width">340dp</dimen>
+
+    <!-- Home Icons -->
+    <dimen name="home_station_icon_size">18dp</dimen>
+    <dimen name="home_calendar_icon_size">24dp</dimen>
+
+    <!-- Home Field -->
+    <dimen name="home_field_padding">12dp</dimen>
+
+    <!-- Home Text -->
+    <dimen name="home_title_size">20sp</dimen>
+    <dimen name="home_label_size">12sp</dimen>
+
+    <dimen name="home_quick_action_height">48dp</dimen>
+    <dimen name="home_small_spacing">4dp</dimen>
+
+    <!-- Station Search -->
+    <dimen name="station_search_bar_height">48dp</dimen>
+    <dimen name="station_search_icon_size">20dp</dimen>
+    <dimen name="station_item_padding">16dp</dimen>
+    <dimen name="station_code_radius">12dp</dimen>
+    <dimen name="station_item_height">48dp</dimen>
 </resources>

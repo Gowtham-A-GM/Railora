@@ -1,5 +1,6 @@
 package com.example.railora.ui.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.railora.databinding.FragmentLoginBinding
 import androidx.navigation.fragment.findNavController
+import com.example.railora.MainActivity
 import com.example.railora.R
 
 /**
@@ -38,9 +40,9 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_loginFragment_to_homeFragment
-            )
+            val intent = Intent(requireContext(), MainActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
         }
 
         binding.tvSignUp.setOnClickListener {

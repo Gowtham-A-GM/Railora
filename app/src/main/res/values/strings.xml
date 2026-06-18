@@ -56,4 +56,26 @@
     <string name="enter_confirm_password">Confirm Your Password</string>
     <string name="already_have_account">Already have an account?</string>
     <string name="login">Login</string>
+
+    <!-- Bottom Navigation -->
+    <string name="menu_train">Train</string>
+    <string name="menu_wallet">Wallet</string>
+    <string name="menu_profile">My Profile</string>
+
+    <!-- Home -->
+    <string name="from_station">Select Your Station</string>
+    <string name="to_station">Select Your Station</string>
+    <string name="home_date_placeholder">Pick A Date</string>
+    <string name="home_search_title">Where Are You Starting From and Going?</string>
+    <string name="traveling_from">Traveling From</string>
+    <string name="traveling_to">Traveling To</string>
+    <string name="search_train">Search Train</string>
+    <string name="date">Date</string>
+    <string name="track_train">Track Train</string>
+    <string name="pnr_status">PNR Status</string>
+    <string name="search_station_hint">Search Station</string>
+    <string name="from_station_title">From Station</string>
+    <string name="home_greeting">Good Morning, Gowtham!</string>
+    <string name="track_train_url">https://enquiry.indianrail.gov.in/mntes</string>
+    <string name="pnr_status_url">https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en</string>
 </resources>

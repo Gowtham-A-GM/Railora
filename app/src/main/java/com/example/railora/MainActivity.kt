@@ -3,9 +3,12 @@ package com.example.railora
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.example.railora.databinding.ActivityMainBinding
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.railora.databinding.ActivityMainBinding
+import androidx.core.view.WindowInsetsControllerCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,13 +16,40 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
+//        enableEdgeToEdge()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { view, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+
+        window.statusBarColor =
+            getColor(R.color.home_background)
+
+        WindowInsetsControllerCompat(
+            window,
+            window.decorView
+        ).isAppearanceLightStatusBars = true
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.mainNavHost) { view, insets ->
+
+            val statusBarInsets =
+                insets.getInsets(WindowInsetsCompat.Type.statusBars())
+
+            view.setPadding(
+                0,
+                statusBarInsets.top,
+                0,
+                0
+            )
+
             insets
         }
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.mainNavHost) as NavHostFragment
+
+        val navController = navHostFragment.navController
+
+        binding.bottomNavigation.setupWithNavController(navController)
     }
 }

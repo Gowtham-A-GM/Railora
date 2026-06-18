@@ -87,4 +87,45 @@
         <item name="android:textColor">@color/login_text_primary</item>
     </style>
 
+    <!-- Home -->
+
+    <style name="RailoraHomeHeaderTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/login_title_blue</item>
+    </style>
+
+    <style name="RailoraHomeAppName">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/login_title_blue</item>
+    </style>
+
+    <style name="RailoraHomeGreeting">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/home_label_color</item>
+    </style>
+
+    <!-- Home Title -->
+    <style name="RailoraHomeTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/home_title_size</item>
+        <item name="android:textColor">@color/login_text_primary</item>
+    </style>
+
+    <!-- Home Labels -->
+    <style name="RailoraHomeLabel">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/home_label_size</item>
+        <item name="android:textColor">@color/home_label_color</item>
+    </style>
+
+    <!-- Home Placeholder -->
+    <style name="RailoraHomePlaceholder">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/home_label_color</item>
+    </style>
+
 </resources>

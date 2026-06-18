@@ -1,15 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="@color/home_background">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Railora"
-        android:textSize="24sp"
-        android:fontFamily="@font/poppins_semibold"/>
+        android:orientation="vertical"
+        android:padding="@dimen/home_screen_padding">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/home_section_spacing"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    style="@style/RailoraHomeAppName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_greeting"
+                    style="@style/RailoraHomeGreeting" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/home_header_logo_size"
+                android:layout_height="@dimen/home_header_logo_size"
+                android:src="@drawable/railora_logo_blue" />
+
+        </LinearLayout>
+        <!-- Banner -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/home_banner_width"
+                    android:layout_height="@dimen/home_banner_height"
+                    android:layout_marginEnd="@dimen/home_section_spacing"
+                    app:cardCornerRadius="@dimen/home_card_radius"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/home_banner1" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/home_banner_width"
+                    android:layout_height="@dimen/home_banner_height"
+                    app:cardCornerRadius="@dimen/home_card_radius"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/home_banner2" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- Title -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_section_spacing"
+            android:text="@string/home_search_title"
+            style="@style/RailoraHomeTitle"/>
+
+        <!-- Traveling From Label -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_section_spacing"
+            android:text="@string/traveling_from"
+            style="@style/RailoraHomeLabel"/>
+
+        <!-- From Station -->
+
+        <LinearLayout
+            android:id="@+id/layoutFromStation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_home_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_station_icon_size"
+                android:layout_height="@dimen/home_station_icon_size"
+                android:src="@drawable/ic_train"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:id="@+id/tvFromStation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/from_station"
+                android:textColor="@color/home_label_color"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <!-- Traveling To Label -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_section_spacing"
+            android:text="@string/traveling_to"
+            style="@style/RailoraHomeLabel" />
+
+        <!-- To Station -->
+
+        <LinearLayout
+            android:id="@+id/layoutToStation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_home_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_station_icon_size"
+                android:layout_height="@dimen/home_station_icon_size"
+                android:src="@drawable/ic_train"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:id="@+id/tvToStation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/to_station"
+                android:textColor="@color/home_label_color"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <!-- Date -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_section_spacing"
+            android:text="@string/date"
+            style="@style/RailoraHomeLabel" />
+
+        <LinearLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_home_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <ImageView
+                android:layout_width="@dimen/home_calendar_icon_size"
+                android:layout_height="@dimen/home_calendar_icon_size"
+                android:src="@drawable/ic_calendar"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/home_date_placeholder"
+                android:textColor="@color/home_label_color"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+
+        <!-- Search Button -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSearchTrain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_button_height"
+            android:layout_marginTop="@dimen/home_section_spacing"
+            android:text="@string/search_train"
+            android:textColor="@android:color/white"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/home_button_orange"
+            style="@style/RailoraLoginButton"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_section_spacing"
+            android:orientation="horizontal">
+
+            <!-- Track Train -->
+
+            <LinearLayout
+                android:id="@+id/layoutTrackTrain"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_quick_action_height"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/home_section_spacing"
+                android:background="@drawable/bg_home_quick_action"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/home_station_icon_size"
+                    android:layout_height="@dimen/home_station_icon_size"
+                    android:src="@drawable/ic_track_train" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/home_small_spacing"
+                    android:text="@string/track_train"
+                    style="@style/RailoraHomePlaceholder" />
+
+            </LinearLayout>
+
+            <!-- PNR Status -->
+
+            <LinearLayout
+                android:id="@+id/layoutPnrStatus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_quick_action_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_quick_action"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/home_station_icon_size"
+                    android:layout_height="@dimen/home_station_icon_size"
+                    android:src="@drawable/ic_pnr_status" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/home_small_spacing"
+                    android:text="@string/pnr_status"
+                    style="@style/RailoraHomePlaceholder" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
