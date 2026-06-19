@@ -27,9 +27,9 @@
     <color name="login_text_primary">#222222</color>
 
     <!-- Bottom Navigation -->
+    <color name="bottom_nav_selected">#3D8BFF</color>
+    <color name="bottom_nav_unselected">#9A9A9A</color>
     <color name="bottom_nav_background">#FFFFFF</color>
-    <color name="bottom_nav_selected">#334A5E</color>
-    <color name="bottom_nav_unselected">#9E9E9E</color>
 
     <!--  Home  -->
     <color name="home_background">#F5F5F5</color>
