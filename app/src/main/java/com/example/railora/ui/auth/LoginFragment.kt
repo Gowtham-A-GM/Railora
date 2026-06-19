@@ -175,9 +175,10 @@ class LoginFragment : Fragment() {
             )
         }
 
-        binding.tvSignUp.setOnClickListener {
+        binding.tvForgotPassword.setOnClickListener {
+
             findNavController().navigate(
-                R.id.action_loginFragment_to_signUpFragment
+                R.id.action_loginFragment_to_forgotPasswordFragment
             )
         }
     }
