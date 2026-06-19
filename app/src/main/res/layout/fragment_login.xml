@@ -84,17 +84,34 @@
                     android:layout_marginTop="@dimen/spacing_md"
                     android:text="@string/password" />
 
-                <EditText
-                    android:id="@+id/etPassword"
-                    style="@style/RailoraLoginInput"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/login_input_height"
-                    android:layout_marginTop="@dimen/spacing_sm"
-                    android:background="@drawable/bg_login_input"
-                    android:hint="@string/enter_password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:paddingHorizontal="@dimen/spacing_md" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        style="@style/RailoraLoginInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_input_height"
+                        android:background="@drawable/bg_login_input"
+                        android:hint="@string/enter_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/spacing_md"
+                        android:paddingEnd="48dp"/>
+
+                    <ImageView
+                        android:id="@+id/ivPasswordToggle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:alpha="0.5"
+                        android:src="@drawable/ic_eye"/>
+
+                </RelativeLayout>
 
                 <TextView
                     android:id="@+id/tvForgotPassword"

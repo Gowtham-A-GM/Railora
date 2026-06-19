@@ -33,14 +33,25 @@
 
     <!-- Login -->
     <string name="enter_your_details">Enter Your Details</string>
-    <string name="railora_username">Railora Username</string>
-    <string name="enter_username">Enter Your Username</string>
+    <string name="railora_username">Email or Phone Number</string>
+    <string name="enter_username">Enter Email or Phone Number</string>
     <string name="password">Password</string>
     <string name="enter_password">Enter Your Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="user_login">User Login</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="sign_up">Sign Up</string>
+
+    <string name="error_enter_name">Enter Full Name</string>
+    <string name="error_enter_aadhaar">Enter Aadhaar Number</string>
+    <string name="error_invalid_aadhaar">Aadhaar must contain 12 digits</string>
+    <string name="error_enter_dob">Select Date of Birth</string>
+    <string name="error_enter_email">Enter Email</string>
+    <string name="error_invalid_email">Enter valid Email</string>
+    <string name="error_enter_password">Enter Password</string>
+    <string name="error_password_length">Password must be at least 6 characters</string>
+    <string name="error_confirm_password">Confirm Password</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
 
     <!-- Sign Up -->
     <string name="create_account">Create Account</string>
@@ -56,6 +67,8 @@
     <string name="enter_confirm_password">Confirm Your Password</string>
     <string name="already_have_account">Already have an account?</string>
     <string name="login">Login</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_phone_number">Enter Your Phone Number</string>
 
     <!-- Bottom Navigation -->
     <string name="menu_train">Train</string>

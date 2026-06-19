@@ -136,6 +136,28 @@
                     android:maxLines="1"
                     android:paddingHorizontal="@dimen/spacing_md" />
 
+                <!-- Phone Number -->
+
+                <TextView
+                    style="@style/RailoraLoginLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="@string/phone_number" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    style="@style/RailoraLoginInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:background="@drawable/bg_login_input"
+                    android:hint="@string/enter_phone_number"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/spacing_md" />
+
                 <!-- Password -->
                 <TextView
                     style="@style/RailoraLoginLabel"
@@ -144,17 +166,34 @@
                     android:layout_marginTop="@dimen/spacing_md"
                     android:text="@string/password" />
 
-                <EditText
-                    android:id="@+id/etPassword"
-                    style="@style/RailoraLoginInput"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/login_input_height"
-                    android:layout_marginTop="@dimen/spacing_sm"
-                    android:background="@drawable/bg_login_input"
-                    android:hint="@string/enter_password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:paddingHorizontal="@dimen/spacing_md" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        style="@style/RailoraLoginInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_input_height"
+                        android:background="@drawable/bg_login_input"
+                        android:hint="@string/enter_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/spacing_md"
+                        android:paddingEnd="48dp"/>
+
+                    <ImageView
+                        android:id="@+id/ivPasswordToggle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:alpha="0.5"
+                        android:src="@drawable/ic_eye"/>
+
+                </RelativeLayout>
 
                 <!-- Confirm Password -->
                 <TextView
@@ -164,17 +203,34 @@
                     android:layout_marginTop="@dimen/spacing_md"
                     android:text="@string/confirm_password" />
 
-                <EditText
-                    android:id="@+id/etConfirmPassword"
-                    style="@style/RailoraLoginInput"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/login_input_height"
-                    android:layout_marginTop="@dimen/spacing_sm"
-                    android:background="@drawable/bg_login_input"
-                    android:hint="@string/enter_confirm_password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:paddingHorizontal="@dimen/spacing_md" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm">
+
+                    <EditText
+                        android:id="@+id/etConfirmPassword"
+                        style="@style/RailoraLoginInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_input_height"
+                        android:background="@drawable/bg_login_input"
+                        android:hint="@string/enter_confirm_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/spacing_md"
+                        android:paddingEnd="48dp"/>
+
+                    <ImageView
+                        android:id="@+id/ivConfirmPasswordToggle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:alpha="0.5"
+                        android:src="@drawable/ic_eye"/>
+
+                </RelativeLayout>
 
                 <TextView
                     android:id="@+id/btnCreateAccount"

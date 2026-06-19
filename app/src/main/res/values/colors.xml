@@ -22,9 +22,12 @@
     <color name="login_card_background">#FFFFFF</color>
     <color name="login_title_blue">#334A5E</color>
     <color name="login_hint">#B7B7B7</color>
-    <color name="login_input_background">#DCDCDC</color>
+    <color name="login_input_background">#E8E8E8</color>
     <color name="login_button_background">#FF984A</color>
     <color name="login_text_primary">#222222</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="input_error_border">#FF984A</color>
+    <color name="input_error_background">#FFF4EC</color>
 
     <!-- Bottom Navigation -->
     <color name="bottom_nav_selected">#3D8BFF</color>
