@@ -7,10 +7,16 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.railora.ui.home.HomeFragment"
-        android:label="Home" >
+        android:label="Home">
+
         <action
             android:id="@+id/action_homeFragment_to_stationSearchFragment"
             app:destination="@id/stationSearchFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_searchTrainResultFragment"
+            app:destination="@id/searchTrainResultFragment" />
+
     </fragment>
 
     <fragment
@@ -27,5 +33,15 @@
         android:id="@+id/stationSearchFragment"
         android:name="com.example.railora.ui.home.StationSearchFragment"
         android:label="Station Search" />
+
+    <fragment
+        android:id="@+id/searchTrainResultFragment"
+        android:name="com.example.railora.ui.search.SearchTrainResultFragment"
+        android:label="Search Train Result" />
+
+    <fragment
+        android:id="@+id/reviewJourneyFragment"
+        android:name="com.example.railora.ui.search.ReviewJourneyFragment"
+        android:label="Review Journey" />
 
 </navigation>

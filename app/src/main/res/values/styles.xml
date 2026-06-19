@@ -128,4 +128,30 @@
         <item name="android:textColor">@color/home_label_color</item>
     </style>
 
+    <!-- Search Result -->
+
+    <style name="RailoraSearchTrainName">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/search_result_train_name_size</item>
+        <item name="android:textColor">@color/search_result_train_name</item>
+    </style>
+
+    <style name="RailoraSearchTrainNumber">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/search_result_train_number_size</item>
+        <item name="android:textColor">@color/search_result_secondary_text</item>
+    </style>
+
+    <style name="RailoraSearchTime">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/search_result_time_size</item>
+        <item name="android:textColor">@color/login_text_primary</item>
+    </style>
+
+    <style name="RailoraSearchStation">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/search_result_station_size</item>
+        <item name="android:textColor">@color/search_result_secondary_text</item>
+    </style>
+
 </resources>

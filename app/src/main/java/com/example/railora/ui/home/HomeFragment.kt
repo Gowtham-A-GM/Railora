@@ -128,6 +128,12 @@ class HomeFragment : Fragment() {
             )
         }
 
+        binding.btnSearchTrain.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_homeFragment_to_searchTrainResultFragment
+            )
+        }
+
         findNavController()
             .currentBackStackEntry
             ?.savedStateHandle

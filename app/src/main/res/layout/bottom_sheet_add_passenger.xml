@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet"
+        android:orientation="vertical"
+        android:padding="@dimen/bottom_sheet_padding">
+
+        <TextView
+            style="@style/RailoraSearchTrainName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_passenger"/>
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:background="@drawable/bg_login_input"
+            android:hint="@string/first_name"/>
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:background="@drawable/bg_login_input"
+            android:hint="@string/last_name"/>
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:background="@drawable/bg_login_input"
+            android:hint="@string/age"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etGender"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:background="@drawable/bg_login_input"
+            android:hint="@string/gender"/>
+
+        <EditText
+            android:id="@+id/etBerthPreference"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:background="@drawable/bg_login_input"
+            android:hint="@string/berth_preference"/>
+
+        <LinearLayout
+            android:id="@+id/btnAddPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_sheet_button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_login_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_passenger_button"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

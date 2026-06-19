@@ -100,4 +100,33 @@
     <string name="home_greeting">Good Morning, Gowtham!</string>
     <string name="track_train_url">https://enquiry.indianrail.gov.in/mntes</string>
     <string name="pnr_status_url">https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en</string>
+
+    <!-- Search Result -->
+    <string name="search_results">Search Results</string>
+    <string name="sort_by">Sort By</string>
+    <string name="select_train">Select Train</string>
+    <string name="available">AVAILABLE</string>
+    <string name="duration">Duration</string>
+    <string name="train_classes">Classes</string>
+    <string name="journey_route">SRR to TVM</string>
+    <string name="sleeper">Sleeper</string>
+    <string name="quota">Quota</string>
+    <string name="general">General</string>
+
+    <!-- Train Details -->
+
+    <string name="availability_by_date">Availability By Date</string>
+    <string name="continue_booking">Continue</string>
+    <string name="fare">Fare</string>
+    <string name="select_passenger">Select Passenger</string>
+    <string name="add_new_passenger">Add New Passenger</string>
+    <string name="review_journey_details">Review Journey Details</string>
+
+    <string name="add_passenger">Add Passenger</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="berth_preference">Berth Preference</string>
+    <string name="add_passenger_button">Add Passenger</string>
 </resources>

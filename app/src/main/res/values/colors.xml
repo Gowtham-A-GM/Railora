@@ -41,4 +41,25 @@
     <color name="home_button_orange">#FF984A</color>
     <color name="station_search_background">#FFFFFF</color>
     <color name="station_code_background">#FFD54F</color>
+
+    <!-- Search Result -->
+    <color name="search_result_card_background">#FFFFFF</color>
+    <color name="search_result_class_background">#EEF3F8</color>
+    <color name="search_result_available_background">#E8F7ED</color>
+    <color name="search_result_available_text">#1B8E3E</color>
+    <color name="search_result_divider">#EAEAEA</color>
+    <color name="search_result_train_name">#334A5E</color>
+    <color name="search_result_secondary_text">#7A7A7A</color>
+
+    <!-- Train Class -->
+
+    <color name="train_class_background">#F7F7F7</color>
+    <color name="train_class_border">#E5E5E5</color>
+    <color name="availability_red">#FF6B6B</color>
+    <color name="availability_green">#2DBE60</color>
+
+    <!-- Availability -->
+
+    <color name="availability_card_background">#F7F7F7</color>
+    <color name="availability_card_border">#E5E5E5</color>
 </resources>

@@ -88,4 +88,41 @@
     <dimen name="station_item_padding">16dp</dimen>
     <dimen name="station_code_radius">12dp</dimen>
     <dimen name="station_item_height">48dp</dimen>
+
+    <!-- Search Result -->
+    <dimen name="search_result_screen_padding">16dp</dimen>
+    <dimen name="search_result_card_radius">12dp</dimen>
+    <dimen name="search_result_card_padding">16dp</dimen>
+    <dimen name="search_result_card_margin">10dp</dimen>
+    <dimen name="search_result_train_name_size">16sp</dimen>
+    <dimen name="search_result_train_number_size">12sp</dimen>
+    <dimen name="search_result_time_size">18sp</dimen>
+    <dimen name="search_result_station_size">12sp</dimen>
+    <dimen name="search_result_chip_padding_horizontal">12dp</dimen>
+    <dimen name="search_result_chip_padding_vertical">6dp</dimen>
+    <dimen name="search_result_button_height">44dp</dimen>
+    <dimen name="search_result_availability_radius">8dp</dimen>
+
+    <!-- Train Class Card -->
+
+    <dimen name="train_class_card_width">72dp</dimen>
+    <dimen name="train_class_card_height">52dp</dimen>
+    <dimen name="train_class_card_radius">8dp</dimen>
+    <dimen name="train_class_code_size">12sp</dimen>
+    <dimen name="train_class_fare_size">11sp</dimen>
+    <dimen name="train_class_availability_size">10sp</dimen>
+
+    <!-- Availability Day Card -->
+
+    <dimen name="availability_card_width">72dp</dimen>
+    <dimen name="availability_card_height">56dp</dimen>
+    <dimen name="availability_card_radius">8dp</dimen>
+    <dimen name="availability_date_size">11sp</dimen>
+    <dimen name="availability_status_size">10sp</dimen>
+
+    <!-- Train Details Bottom Sheet -->
+    <dimen name="bottom_sheet_padding">20dp</dimen>
+    <dimen name="bottom_sheet_title_size">18sp</dimen>
+    <dimen name="bottom_sheet_subtitle_size">14sp</dimen>
+    <dimen name="bottom_sheet_button_height">52dp</dimen>
 </resources>

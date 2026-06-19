@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="@dimen/bottom_sheet_padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/RailoraSearchTrainName"
+        android:text="@string/select_passenger"/>
+
+    <CheckBox
+        android:id="@+id/cbPassenger1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:text="Ahmed Hassan"/>
+
+    <CheckBox
+        android:id="@+id/cbPassenger2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anjali Sharma"/>
+
+    <CheckBox
+        android:id="@+id/cbPassenger3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arjun Mishra"/>
+
+    <TextView
+        android:id="@+id/tvAddPassenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:text="@string/add_new_passenger"
+        android:textColor="@color/home_button_orange"/>
+
+    <LinearLayout
+        android:id="@+id/btnReviewJourney"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_sheet_button_height"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:background="@drawable/bg_login_button"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/review_journey_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_button_text_size"/>
+
+    </LinearLayout>
+
+</LinearLayout>

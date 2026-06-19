@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet"
+        android:orientation="vertical"
+        android:padding="@dimen/bottom_sheet_padding">
+
+        <TextView
+            android:id="@+id/tvTrainName"
+            style="@style/RailoraSearchTrainName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAQ TVC VB EXP (20631)" />
+
+        <TextView
+            android:id="@+id/tvSelectedClass"
+            style="@style/RailoraSearchStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="SL • ₹325" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/availability_by_date"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/spacing_md" />
+
+        <LinearLayout
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_sheet_button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_login_button"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/continue_booking"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_button_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

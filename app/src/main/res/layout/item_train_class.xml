@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/train_class_card_width"
+    android:layout_height="@dimen/train_class_card_height"
+    android:layout_marginEnd="@dimen/spacing_sm"
+    android:background="@drawable/bg_train_class"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvClassCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="SL"
+        android:textColor="@color/login_text_primary"
+        android:textSize="@dimen/train_class_code_size" />
+
+    <TextView
+        android:id="@+id/tvFare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹325.8"
+        android:textColor="@color/login_text_primary"
+        android:textSize="@dimen/train_class_fare_size" />
+
+    <TextView
+        android:id="@+id/tvAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WL 83"
+        android:textColor="@color/availability_red"
+        android:textSize="@dimen/train_class_availability_size" />
+
+</LinearLayout>

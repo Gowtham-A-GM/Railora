@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/availability_card_width"
+    android:layout_height="@dimen/availability_card_height"
+    android:layout_marginEnd="@dimen/spacing_sm"
+    android:background="@drawable/bg_availability_card"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDateDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="20 FRI"
+        android:textColor="@color/login_text_primary"
+        android:textSize="@dimen/availability_date_size" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="WL 53"
+        android:textColor="@color/availability_red"
+        android:textSize="@dimen/availability_status_size" />
+
+</LinearLayout>
