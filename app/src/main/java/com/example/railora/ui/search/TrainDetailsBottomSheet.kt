@@ -19,6 +19,9 @@ class TrainDetailsBottomSheet(
     private var _binding: BottomSheetTrainDetailsBinding? = null
     private val binding get() = _binding!!
 
+    private var isDateSelected = false
+    private lateinit var availabilityList: List<AvailabilityDay>
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -47,6 +50,8 @@ class TrainDetailsBottomSheet(
     private fun setupUi() {
 
         binding.tvTrainName.text = trainName
+        binding.btnContinue.alpha = 0.5f
+        binding.btnContinue.isEnabled = false
 
         binding.tvSelectedClass.text =
             "$selectedClass • $fare"
@@ -64,7 +69,7 @@ class TrainDetailsBottomSheet(
 
     private fun setupAvailabilityRecyclerView() {
 
-        val availabilityList = listOf(
+        availabilityList = listOf(
             AvailabilityDay("20", "FRI", "WL 53"),
             AvailabilityDay("21", "SAT", "RAC 3"),
             AvailabilityDay("22", "SUN", "AVL 13"),
@@ -80,7 +85,19 @@ class TrainDetailsBottomSheet(
             )
 
         binding.rvAvailability.adapter =
-            AvailabilityAdapter(availabilityList)
+            AvailabilityAdapter(availabilityList) { selectedDay ->
+
+                availabilityList.forEach {
+                    it.isSelected = false
+                }
+
+                selectedDay.isSelected = true
+
+                binding.rvAvailability.adapter?.notifyDataSetChanged()
+
+                binding.btnContinue.alpha = 1f
+                binding.btnContinue.isEnabled = true
+            }
     }
 
     override fun onStart() {

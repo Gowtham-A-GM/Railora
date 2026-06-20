@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.railora.databinding.FragmentSearchTrainResultBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.railora.adapters.TrainResultAdapter
@@ -15,6 +16,8 @@ class SearchTrainResultFragment : Fragment() {
 
     private var _binding: FragmentSearchTrainResultBinding? = null
     private val binding get() = _binding!!
+    private lateinit var trainResultAdapter: TrainResultAdapter
+    private lateinit var trainList: List<TrainResult>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +30,10 @@ class SearchTrainResultFragment : Fragment() {
             container,
             false
         )
+
+        binding.tvBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
         return binding.root
     }
@@ -59,7 +66,11 @@ class SearchTrainResultFragment : Fragment() {
                 source = "SRR",
                 destination = "TVC",
                 classes = listOf(
-                    TrainClass("SL", "₹325", "WL 83"),
+                    TrainClass(
+                        classCode = "SL",
+                        fare = "₹325",
+                        availability = "WL 83"
+                    ),
                     TrainClass("CC", "₹450", "AVL 20"),
                     TrainClass("EC", "₹850", "WL 10"),
                     TrainClass("1A", "₹1500", "AVL 03")
@@ -86,24 +97,43 @@ class SearchTrainResultFragment : Fragment() {
 
     private fun setupRecyclerView() {
 
-        val adapter = TrainResultAdapter(
-            trainList = getDummyTrainList(),
+        trainList = getDummyTrainList()
+
+        trainResultAdapter = TrainResultAdapter(
+            trainList = trainList,
             onClassClick = { train, trainClass ->
 
-                TrainDetailsBottomSheet(
-                    trainName = "${train.trainName} (${train.trainNumber})",
-                    selectedClass = trainClass.classCode,
-                    fare = trainClass.fare
-                ).show(
-                    childFragmentManager,
-                    "TrainDetailsBottomSheet"
-                )
+                val wasSelected = trainClass.isSelected
+
+                trainList.forEach { currentTrain ->
+                    currentTrain.classes.forEach {
+                        it.isSelected = false
+                    }
+                }
+
+                if (!wasSelected) {
+                    trainClass.isSelected = true
+                }
+
+                trainResultAdapter.notifyDataSetChanged()
+
+                if (!wasSelected) {
+
+                    TrainDetailsBottomSheet(
+                        trainName = "${train.trainName} (${train.trainNumber})",
+                        selectedClass = trainClass.classCode,
+                        fare = trainClass.fare
+                    ).show(
+                        childFragmentManager,
+                        "TrainDetailsBottomSheet"
+                    )
+                }
             }
         )
 
         binding.rvTrainResults.layoutManager =
             LinearLayoutManager(requireContext())
 
-        binding.rvTrainResults.adapter = adapter
+        binding.rvTrainResults.adapter = trainResultAdapter
     }
 }

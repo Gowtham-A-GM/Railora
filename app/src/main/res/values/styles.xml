@@ -154,4 +154,17 @@
         <item name="android:textColor">@color/search_result_secondary_text</item>
     </style>
 
+    <style name="RailoraPassengerLabel">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/home_label_color</item>
+    </style>
+
+    <style name="RailoraPassengerInput">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/login_text_primary</item>
+        <item name="android:textColorHint">@color/login_hint</item>
+    </style>
+
 </resources>

@@ -14,24 +14,11 @@
         style="@style/RailoraSearchTrainName"
         android:text="@string/select_passenger"/>
 
-    <CheckBox
-        android:id="@+id/cbPassenger1"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPassengers"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_md"
-        android:text="Ahmed Hassan"/>
-
-    <CheckBox
-        android:id="@+id/cbPassenger2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Anjali Sharma"/>
-
-    <CheckBox
-        android:id="@+id/cbPassenger3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arjun Mishra"/>
+        android:layout_marginTop="@dimen/spacing_md"/>
 
     <TextView
         android:id="@+id/tvAddPassenger"

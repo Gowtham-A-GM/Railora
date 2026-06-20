@@ -92,8 +92,8 @@
     <!-- Search Result -->
     <dimen name="search_result_screen_padding">16dp</dimen>
     <dimen name="search_result_card_radius">12dp</dimen>
-    <dimen name="search_result_card_padding">16dp</dimen>
-    <dimen name="search_result_card_margin">10dp</dimen>
+    <dimen name="search_result_card_padding">12dp</dimen>
+    <dimen name="search_result_card_margin">8dp</dimen>
     <dimen name="search_result_train_name_size">16sp</dimen>
     <dimen name="search_result_train_number_size">12sp</dimen>
     <dimen name="search_result_time_size">18sp</dimen>
@@ -125,4 +125,5 @@
     <dimen name="bottom_sheet_title_size">18sp</dimen>
     <dimen name="bottom_sheet_subtitle_size">14sp</dimen>
     <dimen name="bottom_sheet_button_height">52dp</dimen>
+    <dimen name="passenger_input_height">40dp</dimen>
 </resources>

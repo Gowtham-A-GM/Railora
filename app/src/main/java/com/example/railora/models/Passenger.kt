@@ -1,6 +1,10 @@
 package com.example.railora.models
 
 data class Passenger(
-    val name: String,
-    var selected: Boolean = false
+    val firstName: String,
+    val lastName: String,
+    val age: String,
+    val gender: String,
+    val berthPreference: String,
+    var isSelected: Boolean = false
 )

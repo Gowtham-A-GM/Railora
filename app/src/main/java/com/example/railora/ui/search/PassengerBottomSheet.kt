@@ -9,11 +9,15 @@ import androidx.navigation.fragment.findNavController
 import com.example.railora.R
 import com.example.railora.databinding.BottomSheetPassengerBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.railora.adapters.PassengerAdapter
+import com.example.railora.utils.PassengerManager
 
 class PassengerBottomSheet : BottomSheetDialogFragment() {
 
     private var _binding: BottomSheetPassengerBinding? = null
     private val binding get() = _binding!!
+    private lateinit var passengerAdapter: PassengerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,15 +31,18 @@ class PassengerBottomSheet : BottomSheetDialogFragment() {
             false
         )
 
+        setupPassengerRecyclerView()
+
+        binding.btnReviewJourney.alpha = 0.5f
+        binding.btnReviewJourney.isEnabled = false
+
         binding.tvAddPassenger.setOnClickListener {
 
-            android.widget.Toast.makeText(
-                requireContext(),
-                "Clicked",
-                android.widget.Toast.LENGTH_SHORT
-            ).show()
+            AddPassengerBottomSheet {
 
-            AddPassengerBottomSheet().show(
+                passengerAdapter.notifyDataSetChanged()
+
+            }.show(
                 parentFragmentManager,
                 "AddPassengerBottomSheet"
             )
@@ -56,5 +63,36 @@ class PassengerBottomSheet : BottomSheetDialogFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        passengerAdapter.notifyDataSetChanged()
+    }
+
+    private fun setupPassengerRecyclerView() {
+
+        passengerAdapter = PassengerAdapter(
+            PassengerManager.passengerList
+        ) {
+
+            val hasSelectedPassenger =
+                PassengerManager.passengerList.any {
+                    it.isSelected
+                }
+
+            binding.btnReviewJourney.isEnabled =
+                hasSelectedPassenger
+
+            binding.btnReviewJourney.alpha =
+                if (hasSelectedPassenger) 1f else 0.5f
+        }
+
+        binding.rvPassengers.layoutManager =
+            LinearLayoutManager(requireContext())
+
+        binding.rvPassengers.adapter =
+            passengerAdapter
     }
 }

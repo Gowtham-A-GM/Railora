@@ -3,11 +3,13 @@ package com.example.railora.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.railora.R
 import com.example.railora.databinding.ItemAvailabilityDayBinding
 import com.example.railora.models.AvailabilityDay
 
 class AvailabilityAdapter(
-    private val availabilityList: List<AvailabilityDay>
+    private val availabilityList: List<AvailabilityDay>,
+    private val onAvailabilityClick: (AvailabilityDay) -> Unit
 ) : RecyclerView.Adapter<AvailabilityAdapter.AvailabilityViewHolder>() {
 
     inner class AvailabilityViewHolder(
@@ -21,6 +23,23 @@ class AvailabilityAdapter(
 
             binding.tvStatus.text =
                 item.status
+
+            if (item.isSelected) {
+
+                binding.root.setBackgroundResource(
+                    R.drawable.bg_availability_selected
+                )
+
+            } else {
+
+                binding.root.setBackgroundResource(
+                    R.drawable.bg_train_class
+                )
+            }
+
+            binding.root.setOnClickListener {
+                onAvailabilityClick(item)
+            }
         }
     }
 

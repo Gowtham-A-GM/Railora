@@ -17,62 +17,110 @@
             android:layout_height="wrap_content"
             android:text="@string/add_passenger"/>
 
+        <TextView
+            style="@style/RailoraPassengerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/first_name"/>
+
         <EditText
             android:id="@+id/etFirstName"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/login_input_height"
-            android:layout_marginTop="@dimen/spacing_md"
+            android:layout_height="@dimen/passenger_input_height"
+            android:layout_marginTop="@dimen/spacing_sm"
             android:background="@drawable/bg_login_input"
-            android:hint="@string/first_name"/>
+            android:hint="@string/first_name"
+            style="@style/RailoraPassengerInput"
+            android:paddingHorizontal="@dimen/home_field_padding"/>
+
+        <TextView
+            style="@style/RailoraPassengerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/last_name"/>
 
         <EditText
             android:id="@+id/etLastName"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/login_input_height"
+            android:layout_height="@dimen/passenger_input_height"
             android:layout_marginTop="@dimen/spacing_sm"
             android:background="@drawable/bg_login_input"
-            android:hint="@string/last_name"/>
+            android:hint="@string/last_name"
+            style="@style/RailoraPassengerInput"
+            android:paddingHorizontal="@dimen/home_field_padding"/>
+
+        <TextView
+            style="@style/RailoraPassengerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/age"/>
 
         <EditText
             android:id="@+id/etAge"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/login_input_height"
+            android:layout_height="@dimen/passenger_input_height"
             android:layout_marginTop="@dimen/spacing_sm"
             android:background="@drawable/bg_login_input"
             android:hint="@string/age"
-            android:inputType="number"/>
+            android:inputType="number"
+            style="@style/RailoraPassengerInput"
+            android:paddingHorizontal="@dimen/home_field_padding"/>
+
+        <TextView
+            style="@style/RailoraPassengerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/gender"/>
 
         <EditText
             android:id="@+id/etGender"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/login_input_height"
+            android:layout_height="@dimen/passenger_input_height"
             android:layout_marginTop="@dimen/spacing_sm"
             android:background="@drawable/bg_login_input"
-            android:hint="@string/gender"/>
+            android:hint="@string/gender"
+            style="@style/RailoraPassengerInput"
+            android:paddingHorizontal="@dimen/home_field_padding"/>
+
+        <TextView
+            style="@style/RailoraPassengerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/berth_preference"/>
 
         <EditText
             android:id="@+id/etBerthPreference"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/login_input_height"
+            android:layout_height="@dimen/passenger_input_height"
             android:layout_marginTop="@dimen/spacing_sm"
             android:background="@drawable/bg_login_input"
-            android:hint="@string/berth_preference"/>
+            android:hint="@string/berth_preference"
+            style="@style/RailoraPassengerInput"
+            android:paddingHorizontal="@dimen/home_field_padding"/>
 
         <LinearLayout
             android:id="@+id/btnAddPassenger"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bottom_sheet_button_height"
             android:layout_marginTop="@dimen/spacing_lg"
+            android:layout_marginBottom="@dimen/spacing_sm"
             android:background="@drawable/bg_login_button"
+            android:gravity="center"
             android:clickable="true"
-            android:focusable="true"
-            android:gravity="center">
+            android:focusable="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="@string/add_passenger_button"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_button_text_size"/>
 
         </LinearLayout>
 
