@@ -11,13 +11,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.railora.adapters.TrainResultAdapter
 import com.example.railora.models.TrainClass
 import com.example.railora.models.TrainResult
+import android.widget.PopupMenu
 
 class SearchTrainResultFragment : Fragment() {
 
     private var _binding: FragmentSearchTrainResultBinding? = null
     private val binding get() = _binding!!
     private lateinit var trainResultAdapter: TrainResultAdapter
-    private lateinit var trainList: List<TrainResult>
+    private val trainList = mutableListOf<TrainResult>()
+    private val originalTrainList = mutableListOf<TrainResult>()
+    private var fromStation: String? = null
+    private var toStation: String? = null
+    private var journeyDate: String? = null
+    private var fromStationCode: String? = null
+    private var toStationCode: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,7 +51,31 @@ class SearchTrainResultFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
+        fromStationCode =
+            arguments?.getString("from_station_code")
+
+        toStationCode =
+            arguments?.getString("to_station_code")
+
+        journeyDate =
+            arguments?.getString("journey_date")
+
+        binding.tvJourneyRoute.text =
+            "$fromStationCode To $toStationCode"
+
         setupRecyclerView()
+
+        binding.layoutSortBy.setOnClickListener {
+            showSortPopup()
+        }
+
+        binding.layoutClassFilter.setOnClickListener {
+            showClassPopup()
+        }
+
+        binding.layoutQuota.setOnClickListener {
+            showQuotaPopup()
+        }
     }
 
     override fun onDestroyView() {
@@ -97,7 +128,11 @@ class SearchTrainResultFragment : Fragment() {
 
     private fun setupRecyclerView() {
 
-        trainList = getDummyTrainList()
+        originalTrainList.clear()
+        originalTrainList.addAll(getDummyTrainList())
+
+        trainList.clear()
+        trainList.addAll(originalTrainList)
 
         trainResultAdapter = TrainResultAdapter(
             trainList = trainList,
@@ -135,5 +170,132 @@ class SearchTrainResultFragment : Fragment() {
             LinearLayoutManager(requireContext())
 
         binding.rvTrainResults.adapter = trainResultAdapter
+    }
+
+    private fun showSortPopup() {
+
+        val popupMenu = PopupMenu(
+            requireContext(),
+            binding.layoutSortBy
+        )
+
+        popupMenu.menu.add("Departure Time")
+        popupMenu.menu.add("Arrival Time")
+        popupMenu.menu.add("Duration")
+        popupMenu.menu.add("Train Name")
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+
+            binding.tvSortBy.text = menuItem.title
+
+            when(menuItem.title.toString()) {
+
+                "Departure Time" -> {
+                    trainList.sortBy {
+                        it.departureTime
+                    }
+                }
+
+                "Arrival Time" -> {
+                    trainList.sortBy {
+                        it.arrivalTime
+                    }
+                }
+
+                "Train Name" -> {
+                    trainList.sortBy {
+                        it.trainName
+                    }
+                }
+            }
+
+            trainResultAdapter.notifyDataSetChanged()
+
+            true
+        }
+
+        popupMenu.show()
+    }
+
+    private fun showClassPopup() {
+
+        val popupMenu = PopupMenu(
+            requireContext(),
+            binding.layoutClassFilter
+        )
+
+        popupMenu.menu.add("All")
+        popupMenu.menu.add("SL")
+        popupMenu.menu.add("3A")
+        popupMenu.menu.add("2A")
+        popupMenu.menu.add("CC")
+        popupMenu.menu.add("EC")
+        popupMenu.menu.add("1A")
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+
+            val selectedClass =
+                menuItem.title.toString()
+
+            binding.tvClassFilter.text =
+                selectedClass
+
+            applyClassFilter(selectedClass)
+
+            true
+        }
+
+        popupMenu.show()
+    }
+
+    private fun applyClassFilter(
+        classCode: String
+    ) {
+
+        trainList.clear()
+
+        if (classCode == "All") {
+
+            trainList.addAll(
+                originalTrainList
+            )
+
+        } else {
+
+            trainList.addAll(
+
+                originalTrainList.filter { train ->
+
+                    train.classes.any {
+
+                        it.classCode == classCode
+                    }
+                }
+            )
+        }
+
+        trainResultAdapter.notifyDataSetChanged()
+    }
+
+    private fun showQuotaPopup() {
+
+        val popupMenu = PopupMenu(
+            requireContext(),
+            binding.layoutQuota
+        )
+
+        popupMenu.menu.add("General")
+        popupMenu.menu.add("Tatkal")
+        popupMenu.menu.add("Premium Tatkal")
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+
+            binding.tvQuota.text =
+                menuItem.title
+
+            true
+        }
+
+        popupMenu.show()
     }
 }

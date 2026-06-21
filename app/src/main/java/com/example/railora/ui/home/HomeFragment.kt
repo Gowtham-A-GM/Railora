@@ -129,8 +129,72 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnSearchTrain.setOnClickListener {
+            if (fromStationName.isNullOrEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Select From Station",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            if (toStationName.isNullOrEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Select To Station",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            if (selectedDate.isNullOrEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Select Journey Date",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            val fromCode =
+                fromStationName?.substringAfter("(")
+                    ?.substringBefore(")")
+
+            val toCode =
+                toStationName?.substringAfter("(")
+                    ?.substringBefore(")")
+
+            val bundle = Bundle().apply {
+
+                putString(
+                    "from_station_code",
+                    fromCode
+                )
+
+                putString(
+                    "to_station_code",
+                    toCode
+                )
+
+                putString(
+                    "from_station",
+                    fromStationName
+                )
+
+                putString(
+                    "to_station",
+                    toStationName
+                )
+
+                putString(
+                    "journey_date",
+                    selectedDate
+                )
+            }
+
             findNavController().navigate(
-                R.id.action_homeFragment_to_searchTrainResultFragment
+                R.id.action_homeFragment_to_searchTrainResultFragment,
+                bundle
             )
         }
 
