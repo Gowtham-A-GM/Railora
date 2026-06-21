@@ -10,6 +10,8 @@ import com.example.railora.models.TrainResult
 
 class TrainResultAdapter(
     private val trainList: List<TrainResult>,
+    private val fromStation: String,
+    private val toStation: String,
     private val onClassClick: (TrainResult, TrainClass) -> Unit
 ) : RecyclerView.Adapter<TrainResultAdapter.TrainResultViewHolder>() {
 
@@ -26,8 +28,8 @@ class TrainResultAdapter(
             binding.tvArrivalTime.text = train.arrivalTime
             binding.tvDuration.text = train.duration
 
-            binding.tvSource.text = train.source
-            binding.tvDestination.text = train.destination
+            binding.tvSource.text = fromStation
+            binding.tvDestination.text = toStation
 
             binding.rvClasses.layoutManager =
                 LinearLayoutManager(

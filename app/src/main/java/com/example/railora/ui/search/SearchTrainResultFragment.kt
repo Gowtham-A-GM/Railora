@@ -90,7 +90,7 @@ class SearchTrainResultFragment : Fragment() {
 
             TrainResult(
                 trainNumber = "20631",
-                trainName = "MAQ TVC VB EXP",
+                trainName = "Vande Bharat Express",
                 departureTime = "23:58",
                 arrivalTime = "06:34",
                 duration = "06h 36m",
@@ -121,6 +121,55 @@ class SearchTrainResultFragment : Fragment() {
                     TrainClass("3A", "₹980", "AVL 12"),
                     TrainClass("2A", "₹1450", "WL 04")
                 )
+            ),
+
+            TrainResult(
+                trainNumber = "12678",
+                trainName = "Intercity Express",
+                departureTime = "11:20",
+                arrivalTime = "19:10",
+                duration = "07h 50m",
+                source = "",
+                destination = "",
+                classes = listOf(
+                    TrainClass("SL", "₹340", "AVL 56"),
+                    TrainClass("3A", "₹890", "AVL 18"),
+                    TrainClass("2A", "₹1450", "AVL 06")
+                )
+            ),
+
+            TrainResult(
+                trainNumber = "22645",
+                trainName = "Superfast Express",
+                departureTime = "15:45",
+                arrivalTime = "23:10",
+                duration = "07h 25m",
+                source = "",
+                destination = "",
+                classes = listOf(
+                    TrainClass("SL", "₹380", "AVL 42"),
+                    TrainClass("3A", "₹980", "AVL 11"),
+                    TrainClass("2A", "₹1650", "WL 03"),
+                    TrainClass("1A", "₹2430", "AVL 11"),
+                    TrainClass("EC", "1130", "WL 37"),
+                    TrainClass("CC", "₹450", "WL 20"),
+
+                )
+            ),
+
+            TrainResult(
+                trainNumber = "16382",
+                trainName = "Night Express",
+                departureTime = "22:15",
+                arrivalTime = "05:40",
+                duration = "07h 25m",
+                source = "",
+                destination = "",
+                classes = listOf(
+                    TrainClass("SL", "₹300", "AVL 70"),
+                    TrainClass("3A", "₹850", "AVL 21"),
+                    TrainClass("2A", "₹1350", "AVL 09")
+                )
             )
 
         )
@@ -136,6 +185,8 @@ class SearchTrainResultFragment : Fragment() {
 
         trainResultAdapter = TrainResultAdapter(
             trainList = trainList,
+            fromStation = fromStationCode ?: "",
+            toStation = toStationCode ?: "",
             onClassClick = { train, trainClass ->
 
                 val wasSelected = trainClass.isSelected
@@ -157,7 +208,8 @@ class SearchTrainResultFragment : Fragment() {
                     TrainDetailsBottomSheet(
                         trainName = "${train.trainName} (${train.trainNumber})",
                         selectedClass = trainClass.classCode,
-                        fare = trainClass.fare
+                        fare = trainClass.fare,
+                        journeyDate = journeyDate ?: ""
                     ).show(
                         childFragmentManager,
                         "TrainDetailsBottomSheet"

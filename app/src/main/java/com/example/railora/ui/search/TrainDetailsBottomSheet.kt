@@ -13,7 +13,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class TrainDetailsBottomSheet(
     private val trainName: String,
     private val selectedClass: String,
-    private val fare: String
+    private val fare: String,
+    private val journeyDate: String
 ) : BottomSheetDialogFragment() {
 
     private var _binding: BottomSheetTrainDetailsBinding? = null
@@ -69,13 +70,53 @@ class TrainDetailsBottomSheet(
 
     private fun setupAvailabilityRecyclerView() {
 
-        availabilityList = listOf(
-            AvailabilityDay("20", "FRI", "WL 53"),
-            AvailabilityDay("21", "SAT", "RAC 3"),
-            AvailabilityDay("22", "SUN", "AVL 13"),
-            AvailabilityDay("23", "MON", "AVL 24"),
-            AvailabilityDay("24", "TUE", "AVL 93")
-        )
+        val availabilityList = mutableListOf<AvailabilityDay>()
+
+        val dateFormat =
+            java.text.SimpleDateFormat(
+                "dd MMM yyyy",
+                java.util.Locale.getDefault()
+            )
+
+        val displayDay =
+            java.text.SimpleDateFormat(
+                "dd",
+                java.util.Locale.getDefault()
+            )
+
+        val displayWeek =
+            java.text.SimpleDateFormat(
+                "EEE",
+                java.util.Locale.getDefault()
+            )
+
+        val calendar = java.util.Calendar.getInstance()
+
+        calendar.time =
+            dateFormat.parse(journeyDate)!!
+
+        repeat(5) {
+
+            availabilityList.add(
+
+                AvailabilityDay(
+                    displayDay.format(calendar.time),
+                    displayWeek.format(calendar.time).uppercase(),
+                    listOf(
+                        "AVL 45",
+                        "AVL 12",
+                        "RAC 03",
+                        "WL 08",
+                        "AVL 67"
+                    )[it]
+                )
+            )
+
+            calendar.add(
+                java.util.Calendar.DAY_OF_MONTH,
+                1
+            )
+        }
 
         binding.rvAvailability.layoutManager =
             LinearLayoutManager(
