@@ -206,10 +206,15 @@ class SearchTrainResultFragment : Fragment() {
                 if (!wasSelected) {
 
                     TrainDetailsBottomSheet(
-                        trainName = "${train.trainName} (${train.trainNumber})",
+                        trainName = train.trainName,
+                        trainNumber = train.trainNumber,
+                        departureTime = train.departureTime,
+                        arrivalTime = train.arrivalTime,
                         selectedClass = trainClass.classCode,
                         fare = trainClass.fare,
-                        journeyDate = journeyDate ?: ""
+                        journeyDate = journeyDate ?: "",
+                        fromStation = fromStationCode ?: "",
+                        toStation = toStationCode ?: ""
                     ).show(
                         childFragmentManager,
                         "TrainDetailsBottomSheet"

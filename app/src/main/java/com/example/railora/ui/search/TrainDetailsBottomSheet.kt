@@ -9,12 +9,18 @@ import com.example.railora.adapters.AvailabilityAdapter
 import com.example.railora.databinding.BottomSheetTrainDetailsBinding
 import com.example.railora.models.AvailabilityDay
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.example.railora.utils.BookingManager
 
 class TrainDetailsBottomSheet(
     private val trainName: String,
+    private val trainNumber: String,
+    private val departureTime: String,
+    private val arrivalTime: String,
     private val selectedClass: String,
     private val fare: String,
-    private val journeyDate: String
+    private val journeyDate: String,
+    private val fromStation: String,
+    private val toStation: String
 ) : BottomSheetDialogFragment() {
 
     private var _binding: BottomSheetTrainDetailsBinding? = null
@@ -59,11 +65,37 @@ class TrainDetailsBottomSheet(
 
         binding.btnContinue.setOnClickListener {
 
+            BookingManager.trainName = trainName
+            BookingManager.trainNumber = trainNumber
+
+            BookingManager.departureTime = departureTime
+            BookingManager.arrivalTime = arrivalTime
+
+            BookingManager.selectedClass =
+                selectedClass
+
+            BookingManager.fare =
+                fare
+
+            BookingManager.journeyDate =
+                journeyDate
+
+            BookingManager.fromStation =
+                fromStation
+
+            BookingManager.toStation =
+                toStation
+
             dismiss()
 
             PassengerBottomSheet().show(
                 parentFragmentManager,
                 "PassengerBottomSheet"
+            )
+
+            android.util.Log.d(
+                "BOOKING",
+                BookingManager.trainName
             )
         }
     }

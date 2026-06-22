@@ -62,4 +62,6 @@
 
     <color name="availability_card_background">#F7F7F7</color>
     <color name="availability_card_border">#E5E5E5</color>
+
+    <color name="home_card_border">#E0E0E0</color>
 </resources>

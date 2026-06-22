@@ -11,6 +11,7 @@ import com.example.railora.databinding.BottomSheetPassengerBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.railora.adapters.PassengerAdapter
+import com.example.railora.utils.BookingManager
 import com.example.railora.utils.PassengerManager
 
 class PassengerBottomSheet : BottomSheetDialogFragment() {
@@ -50,7 +51,21 @@ class PassengerBottomSheet : BottomSheetDialogFragment() {
 
         binding.btnReviewJourney.setOnClickListener {
 
+            BookingManager.selectedPassengers.clear()
+
+            PassengerManager.passengerList
+                .filter { it.isSelected }
+                .forEach {
+
+                    BookingManager.selectedPassengers.add(it)
+                }
+
             dismiss()
+
+            android.util.Log.d(
+                "BOOKING",
+                BookingManager.selectedPassengers.toString()
+            )
 
             requireActivity()
                 .findNavController(R.id.mainNavHost)

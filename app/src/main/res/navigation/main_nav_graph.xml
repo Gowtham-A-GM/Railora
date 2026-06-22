@@ -44,4 +44,9 @@
         android:name="com.example.railora.ui.search.ReviewJourneyFragment"
         android:label="Review Journey" />
 
+    <fragment
+        android:id="@+id/ticketBookedFragment"
+        android:name="com.example.railora.ui.search.TicketBookedFragment"
+        android:label="Ticket Booked" />
+
 </navigation>
