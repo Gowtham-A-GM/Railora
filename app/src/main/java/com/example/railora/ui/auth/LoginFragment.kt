@@ -43,6 +43,13 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.tvSignUp.setOnClickListener {
+
+            findNavController().navigate(
+                R.id.action_loginFragment_to_signUpFragment
+            )
+        }
+
         binding.btnLogin.setOnClickListener {
             val username = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()

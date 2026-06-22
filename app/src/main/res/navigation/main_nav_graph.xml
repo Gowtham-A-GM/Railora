@@ -19,10 +19,10 @@
 
     </fragment>
 
-    <fragment
-        android:id="@+id/walletFragment"
-        android:name="com.example.railora.ui.wallet.WalletFragment"
-        android:label="Wallet" />
+<!--    <fragment-->
+<!--        android:id="@+id/walletFragment"-->
+<!--        android:name="com.example.railora.ui.wallet.WalletFragment"-->
+<!--        android:label="Wallet" />-->
 
     <fragment
         android:id="@+id/profileFragment"

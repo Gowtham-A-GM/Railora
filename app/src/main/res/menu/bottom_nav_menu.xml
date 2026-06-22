@@ -6,10 +6,10 @@
         android:icon="@drawable/ic_train"
         android:title="@string/menu_train" />
 
-    <item
-        android:id="@+id/walletFragment"
-        android:icon="@drawable/ic_wallet"
-        android:title="@string/menu_wallet" />
+<!--    <item-->
+<!--        android:id="@+id/walletFragment"-->
+<!--        android:icon="@drawable/ic_wallet"-->
+<!--        android:title="@string/menu_wallet" />-->
 
     <item
         android:id="@+id/profileFragment"
