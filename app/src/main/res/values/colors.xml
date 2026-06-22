@@ -64,4 +64,7 @@
     <color name="availability_card_border">#E5E5E5</color>
 
     <color name="home_card_border">#E0E0E0</color>
+    <color name="ticket_text">#FFFFFF</color>
+    <color name="ticket_label">#D5DCE6</color>
+    <color name="ticket_status_green">#47D764</color>
 </resources>
